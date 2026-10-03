@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venkata Babu Gosu – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1fb;--ink:#17123a;--muted:#585378;--card:#ffffffcc;--line:#d9d2f0;--a:#ff8a00;--b:#7c3aed;--c:#0ea5a4;
+--head:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;--body:'Instrument Sans','Segoe UI',Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0a1f;--ink:#f1eeff;--muted:#a7a1cc;--card:#17133aa8;--line:#2f2860;--a:#ffb020;--b:#a78bfa;--c:#2dd4bf}}
+:root[data-theme="dark"]{--bg:#0c0a1f;--ink:#f1eeff;--muted:#a7a1cc;--card:#17133aa8;--line:#2f2860;--a:#ffb020;--b:#a78bfa;--c:#2dd4bf}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px;position:relative}
+.blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.45;z-index:-1;pointer-events:none}
+.b1{width:420px;height:420px;background:var(--b);top:-120px;right:-100px;animation:drift 18s ease-in-out infinite alternate}
+.b2{width:360px;height:360px;background:var(--a);bottom:-120px;left:-100px;opacity:.3;animation:drift 22s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(60px,50px) scale(1.15)}}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:14px;flex-wrap:wrap}
+nav .links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+.tog{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;font:600 14px var(--body);cursor:pointer}
+.hero{padding:48px 0 70px}
+.hello{display:inline-flex;gap:10px;align-items:center;border:2px solid var(--line);background:var(--card);border-radius:999px;padding:6px 16px;font-weight:500;margin-bottom:26px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 0 0 var(--c);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font:800 clamp(54px,13vw,140px)/.9 var(--head);letter-spacing:-.045em;margin:0 0 26px}
+h1 span{display:block;background:linear-gradient(100deg,var(--a),#ff4d8d 45%,var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.role{font:600 clamp(20px,3.4vw,30px)/1.3 var(--head);margin:0 0 14px}
+.role em{font-style:normal;color:var(--b);border-right:3px solid var(--a);padding-right:4px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.lead{max-width:34em;color:var(--muted);font-size:19px;margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.fill{background:linear-gradient(100deg,var(--a),#ff4d8d);border-color:transparent;color:#fff}
+.marq{overflow:hidden;border-block:2px solid var(--line);padding:14px 0;background:var(--card)}
+.track{display:flex;gap:44px;width:max-content;animation:scroll 28s linear infinite;font:700 24px var(--head);color:var(--muted)}
+.track span:nth-child(3n+1){color:var(--ink)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+section{padding:70px 0 10px}
+h2{font:800 clamp(32px,6vw,52px)/1.05 var(--head);letter-spacing:-.03em;margin:0 0 30px}
+.proj{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border:2px solid var(--line);border-radius:22px;overflow:hidden;backdrop-filter:blur(8px);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px) rotate(-.5deg);border-color:var(--b)}
+.card.big{grid-column:1/-1}
+.art{height:120px;position:relative}
+.art i{position:absolute;border-radius:50%}
+.a1{background:linear-gradient(120deg,#7c3aed,#ff4d8d)}
+.a1 i:nth-child(1){width:90px;height:90px;background:#ffffff33;right:30px;top:-20px}
+.a1 i:nth-child(2){width:50px;height:50px;border:6px solid #ffffff66;left:40px;bottom:-14px}
+.a2{background:linear-gradient(120deg,#0ea5a4,#38bdf8)}
+.a2 i{bottom:0;width:26px;border-radius:6px 6px 0 0;background:#ffffff66}
+.a2 i:nth-child(1){left:30px;height:40px}.a2 i:nth-child(2){left:70px;height:70px}.a2 i:nth-child(3){left:110px;height:55px}.a2 i:nth-child(4){left:150px;height:95px}
+.a3{background:linear-gradient(120deg,#ff8a00,#facc15)}
+.a3 i{width:26px;height:26px;border-radius:8px;background:#ffffffaa;left:30px}
+.a3 i:nth-child(1){top:20px}.a3 i:nth-child(2){top:54px;opacity:.7}.a3 i:nth-child(3){top:88px;opacity:.45}
+.body{padding:24px 26px 26px}
+.card h3{font:800 26px/1.15 var(--head);margin:0 0 6px;letter-spacing:-.02em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.chips li{border:2px solid var(--line);border-radius:999px;padding:3px 13px;font-weight:500;font-size:15px}
+.card ul.pts{margin:12px 0 16px;padding-left:20px;color:var(--muted)}
+.go{font-weight:600;color:var(--b)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.stat{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:24px}
+.stat b{display:block;font:800 52px/1 var(--head);background:linear-gradient(100deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted)}
+.sk{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:34px}
+.sk div{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:22px}
+.sk h3{font:700 19px var(--head);margin:0}
+.tl{position:relative;padding-left:30px;border-left:3px solid var(--line);margin-left:8px}
+.tl div{position:relative;margin-bottom:28px}
+.tl div::before{content:"";position:absolute;left:-39px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--a);border:3px solid var(--bg)}
+.tl b{font:700 21px var(--head)}
+.tl small{display:block;color:var(--muted);font-size:15px}
+.certs{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.certs li{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-weight:500}
+footer{margin:80px 0 50px;padding:50px 30px;border-radius:30px;text-align:center;background:linear-gradient(120deg,var(--b),#ff4d8d 60%,var(--a));color:#fff}
+footer h2{margin-bottom:10px}
+footer a.mail{display:inline-block;margin-top:14px;background:#fff;color:#17123a;border-radius:999px;padding:14px 26px;font:700 clamp(15px,4vw,20px) var(--head);text-decoration:none;word-break:break-all}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div>
+<div class="wrap">
+<nav aria-label="Main"><strong>VBG</strong>
+<div class="links"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+<button class="tog" id="tog" type="button">Switch theme</button></div></nav>
+
+<header class="hero">
+<div class="hello"><span class="dot"></span>Open to internships</div>
+<h1><span>Venkata</span><span>Babu Gosu</span></h1>
+<p class="role">I build <em id="type">full-stack apps</em></p>
+<p class="lead">B.Tech CSE student from Andhra Pradesh. I make web apps with Java, Node.js and Python, and I'm moving toward data engineering and AI/ML.</p>
+<div class="btns"><a class="btn fill" href="#projects">See my projects</a><a class="btn" href="mailto:venkatgosu808@gmail.com">Say hello</a></div>
+</header>
+</div>
+
+<div class="marq" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<div class="wrap">
+<section id="projects">
+<h2>Things I've built</h2>
+<div class="proj">
+<article class="card big"><div class="art a1"><i></i><i></i></div><div class="body">
+<h3>Resume Analyzer</h3>
+<ul class="pts"><li>Reads PDF resumes and gives a resume score and an ATS score, with skill insights.</li><li>Finds missing skills, recommends jobs, suggests improvements and keeps a resume history.</li></ul>
+<ul class="chips"><li>Python</li><li>Flask</li><li>SQLite</li></ul><p><a class="go" href="https://github.com/Venkat-Gosu/RESUME_ANALYZER" target="_blank" rel="noopener">View project</a></p></div></article>
+<article class="card"><div class="art a2"><i></i><i></i><i></i><i></i></div><div class="body">
+<h3>Stock Sales Tracker</h3>
+<ul class="pts"><li>Manages product stock and tracks daily sales.</li><li>REST APIs in Express.js with MySQL storage.</li></ul>
+<ul class="chips"><li>Node.js</li><li>Express.js</li><li>MySQL</li></ul><p><a class="go" href="https://github.com/Venkat-Gosu/shop-stock-sales-tracker" target="_blank" rel="noopener">View project</a></p></div></article>
+<article class="card"><div class="art a3"><i></i><i></i><i></i></div><div class="body">
+<h3>To-Do App</h3>
+<ul class="pts"><li>Create, edit, delete, search, filter and complete tasks.</li><li>Responsive on desktop and mobile.</li></ul>
+<ul class="chips"><li>JavaScript</li><li>Express.js</li><li>MySQL</li></ul><p><a class="go" href="https://github.com/Venkat-Gosu/todo-app" target="_blank" rel="noopener">View project</a></p></div></article>
+</div>
+</section>
+
+<section id="skills">
+<h2>By the numbers</h2>
+<div class="stats">
+<div class="stat"><b data-n="220" data-s="+">0</b><span>LeetCode problems solved</span></div>
+<div class="stat"><b data-n="97.3" data-s="%">0</b><span>in Higher Secondary</span></div>
+<div class="stat"><b data-n="3" data-s="">0</b><span>full-stack projects shipped</span></div>
+<div class="stat"><b>SIH</b><span>Smart India Hackathon participant</span></div>
+</div>
+<div class="sk">
+<div><h3>Programming</h3><ul class="chips"><li>Python</li><li>Java</li><li>C</li><li>SQL</li></ul></div>
+<div><h3>Frontend</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>React.js</li></ul></div>
+<div><h3>Backend</h3><ul class="chips"><li>Node.js</li><li>MySQL</li></ul></div>
+<div><h3>Tools</h3><ul class="chips"><li>GitHub</li><li>VS Code</li></ul></div>
+</div>
+</section>
+
+<section id="education">
+<h2>Learning path</h2>
+<div class="tl">
+<div><b>B.Tech, Computer Science</b><small>Raghu Engineering College, Visakhapatnam · 2024 – 2028</small></div>
+<div><b>Higher Secondary, 97.3%</b><small>Krishna Chaitanya Junior College, Kanigiri · 2022 – 2024</small></div>
+</div>
+<ul class="certs"><li>Problem Solving through C, NPTEL</li><li>Java, CodeChef</li><li>Basics of Python, Infosys Springboard</li><li>1st prize, Maths Talent Test 2023</li></ul>
+</section>
+
+<footer id="contact">
+<h2>Let's build something</h2>
+<p>I'm looking for an internship where I can learn from real tasks and mentors.</p>
+<a class="mail" href="mailto:venkatgosu808@gmail.com">venkatgosu808@gmail.com</a>
+</footer>
+</div>
+<script>
+var skills=["Java","Python","React.js","Node.js","MySQL","Flask","SQL","C","GitHub","Express.js"];
+var t=document.getElementById("track");
+t.innerHTML=skills.concat(skills).map(function(s){return "<span>"+s+"</span>"}).join("");
+var words=["full-stack apps","REST APIs","real-time ideas","things that work"],wi=0,ci=0,del=false,el=document.getElementById("type");
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){(function tick(){var w=words[wi];ci+=del?-1:1;el.textContent=w.slice(0,ci);var d=del?35:70;if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;wi=(wi+1)%words.length;d=300}setTimeout(tick,d)})()}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var b=e.target,n=+b.dataset.n,s=b.dataset.s,k=0,dec=n%1?1:0;var iv=setInterval(function(){k+=n/30;if(k>=n){k=n;clearInterval(iv)}b.textContent=k.toFixed(dec)+s},30)})});
+document.querySelectorAll("[data-n]").forEach(function(b){io.observe(b)});
+document.getElementById("tog").onclick=function(){var r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark"};
+</script>
+</body>
+</html>
